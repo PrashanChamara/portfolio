@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Toggle 'show' class when hamburger is clicked
   navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('show');
+    console.log('Toggle clicked, nav classes:', navLinks.className);
   });
 
   // 2. Initialize the shooting game
