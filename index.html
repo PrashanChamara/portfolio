@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prashan Chamara - Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">Prashan Chamara</a>
+        <!-- Hamburger Button -->
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+        <!-- Nav Links -->
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Shooting Game -->
+  <section id="hero-game">
+    <!-- Canvas for the shooting game -->
+    <canvas id="gameCanvas"></canvas>
+  </section>
+
+  <!-- Hero Section Text -->
+  <section id="hero">
+    <div class="container">
+      <h1>I am Prashan......</h1>
+      <p>Cyber Security | Programming | IT Administration</p>
+      <a href="assets/PrashanChamResume.pdf" class="btn">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am a dedicated Administrator and IT Coordinator based in Dubai with
+        extensive experience in system administration, cloud automation, and
+        cybersecurity. I leverage my expertise to optimize workflows and ensure
+        secure, efficient operations.
+      </p>
+      <img src="assets/images/dummy.png" alt="Profile Picture" />
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-card">
+        <div class="contact-info">
+          <p>Email: <a href="mailto:prashanchamara.a@gmail.com">prashanchamara.a@gmail.com</a></p>
+          <p>Phone: +971588274266</p>
+        </div>
+  
+        <form action="https://formspree.io/f/xrbpzorj" method="POST" id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Prashan Chamara. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

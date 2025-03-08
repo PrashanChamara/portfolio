@@ -1,0 +1,361 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Navigation */
+.navbar {
+  background: #1f1f1f;
+  padding: 10px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+/* Hamburger Button (hidden by default on desktop) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-toggle .hamburger::before {
+  top: -8px;
+}
+
+.nav-toggle .hamburger::after {
+  top: 8px;
+}
+
+/* Show/hide for mobile nav */
+.nav-links.show {
+  display: block;
+}
+
+/* Hero Game Section */
+#hero-game {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Adjust the height of the game section */
+  background: #1f1f1f; /* fallback color */
+  overflow: hidden;
+}
+
+/* Canvas to fill the hero-game section */
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 60px 0; /* add extra spacing so it's clearly below the game */
+  margin-top: -75px;
+}
+#hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+#hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: #121212;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+#about img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* Footer */
+footer {
+  background: #1f1f1f;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  /* About Section: stack vertically */
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+  #about img {
+    margin: 20px 0;
+  }
+
+  /* Nav links hidden by default on mobile, hamburger shown */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* CONTACT SECTION */
+#contact {
+  background-color: #1f1f1f; /* Dark background to contrast with card */
+  padding: 60px 0;          /* Space above/below the contact section */
+}
+
+#contact .container {
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  border-bottom: 2px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Contact Card */
+.contact-card {
+  background-color: #2a2a2a;
+  max-width: 600px;
+  margin: 30px auto 0 auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Info */
+.contact-info {
+  margin-bottom: 20px;
+}
+.contact-info p {
+  margin: 5px 0;
+  color: #ccc;
+}
+.contact-info a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  background: #1f1f1f;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #00bcd4;
+}
+
+/* Send Message Button */
+#contact-form .btn {
+  align-self: center;
+  background-color: #00bcd4;
+  color: #121212;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#contact-form .btn:hover {
+  background-color: #00a0b4;
+}
+
+@media (max-width: 768px) {
+  #contact h2 {
+    font-size: 1.8em;
+  }
+  .contact-card {
+    margin: 20px auto 0 auto;
+    padding: 20px;
+  }
+  #contact-form .btn {
+    width: 100%;
+  }
+}
+
+/* ========================= */
+/*  PROJECTS SECTION STYLES */
+/* ========================= */
+
+#projects {
+  padding: 40px 0;
+  text-align: center;
+}
+
+#projects h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+  border-bottom: 2px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px; /* optional for rounded corners */
+}
+
+.project-card h2 {
+  margin-bottom: 10px;
+  color: #00bcd4;
+}
+
+.project-card p {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/* The "View Details" button */
+.project-card .btn {
+  background: #00bcd4;
+  color: #121212;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.project-card .btn:hover {
+  background: #00a0b4;
+}
