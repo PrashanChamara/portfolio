@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Introduction to Bash Scripting</title>
+  <title>How to Start with Snaps</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,64 +46,107 @@
   <section class="post-container container">
     <!-- Left Column: Blog Article -->
     <div class="post-content">
-      <h1>Introduction to Bash Scripting: Unleashing the Power of the Command Line</h1>
+      <h1>How to Start with Snaps: Installing &amp; Using Snap Package Manager on Linux</h1>
       <p class="post-meta">
-        Published on: 2025/02/10 | Categories:
-        <a href="https://example.com/category/bash" target="_blank">Bash</a>,
-        <a href="https://example.com/category/scripting" target="_blank">Scripting</a>
+        Published on: 2025/01/31 | Categories:
+        <a href="https://example.com/category/linux" target="_blank">Linux</a>,
+        <a href="https://example.com/category/package-manager" target="_blank"
+          >Package Manager</a
+        >
       </p>
 
       <img
-        src="../assets/images/bash-logo.png"
-        alt="Bash Logo"
+        src="../assets/images/snap-logo.png"
+        alt="Snap Logo"
         class="post-main-image"
       />
 
       <p>
-        Bash scripting is the art of writing scripts for the Bash shell—a command language interpreter widely used on Linux and macOS systems. It allows you to automate tasks, manage files, and streamline your workflow directly from the command line.
+        Snaps are a modern packaging format designed to simplify software
+        distribution across different Linux distributions. By using snaps, you
+        can easily install thousands of applications, keep them up-to-date
+        automatically, and avoid dependency conflicts.
       </p>
 
-      <h2>What is Bash Scripting?</h2>
+      <h2>What Are Snaps?</h2>
       <p>
-        Bash scripting involves writing a series of commands in a text file that the Bash shell executes. These scripts can perform a wide range of tasks from simple file operations to complex system administration routines. The ability to automate repetitive tasks makes bash scripting a vital skill for system administrators and developers alike.
+        Snaps are self-contained software packages that include all their
+        required dependencies. This means you can run them on most major Linux
+        distributions without worrying about missing libraries. The
+        <strong>Snap Store</strong> hosts a vast library of apps, from developer
+        tools to desktop applications and server software.
       </p>
 
-      <h2>Why is Bash Scripting Important?</h2>
+      <h2>1. Check If Snap Is Installed</h2>
       <p>
-        The importance of bash scripting lies in its efficiency and flexibility:
+        Many modern Linux distros come with snapd (the Snap daemon)
+        pre-installed. To see if it’s already on your system, open a terminal
+        and run:
       </p>
-      <ul>
-        <li><strong>Automation:</strong> Automate routine tasks such as backups, system updates, or file management.</li>
-        <li><strong>Efficiency:</strong> Save time by combining multiple commands into a single script.</li>
-        <li><strong>Customization:</strong> Tailor scripts to meet specific system needs and workflows.</li>
-        <li><strong>Simplicity:</strong> Write simple yet powerful scripts without the overhead of more complex programming languages.</li>
-      </ul>
 
-      <h2>What Can You Do with Bash Scripting?</h2>
-      <p>
-        With bash scripting, you can:
-      </p>
-      <ul>
-        <li>Automate daily tasks such as cleaning temporary files or managing system resources.</li>
-        <li>Create custom command-line tools to simplify your workflow.</li>
-        <li>Schedule tasks with cron jobs for regular maintenance and updates.</li>
-        <li>Quickly process text, logs, and other data through pipelines and redirection.</li>
-      </ul>
-
-      <h2>A Simple Bash Script Example</h2>
-      <p>
-        Below is a basic bash script that prints a greeting message. Save it to a file (e.g., <code>hello.sh</code>), give it execute permissions with <code>chmod +x hello.sh</code>, and run it:
-      </p>
+      <!-- Example code block with copy button -->
       <div class="code-block">
         <button class="copy-btn" data-target="code1">Copy</button>
-        <pre id="code1"><code>#!/bin/bash
-echo "Hello, Bash Scripting World!"
-</code></pre>
+        <pre id="code1"><code>snap version</code></pre>
       </div>
+
+      <p>
+        If you see a version number for snapd, then you’re all set. Otherwise,
+        you’ll need to install snapd.
+      </p>
+
+      <h2>2. Install Snapd on Your Linux Distribution</h2>
+      <p>
+        The method of installing snapd varies by distro. Here are a few
+        examples:
+      </p>
+
+      <ul>
+        <li><strong>Ubuntu / Debian</strong>: <code>sudo apt update && sudo apt install snapd</code></li>
+        <li><strong>Fedora</strong>: <code>sudo dnf install snapd</code></li>
+        <li><strong>Arch Linux</strong>: <code>sudo pacman -S snapd</code></li>
+      </ul>
+
+      <h2>3. Installing Software via Snap</h2>
+      <p>
+        Once snapd is running, you can search for and install software from the
+        Snap Store. For example, to search for VLC:
+      </p>
+      <div class="code-block">
+        <button class="copy-btn" data-target="code2">Copy</button>
+        <pre id="code2"><code>snap find vlc</code></pre>
+      </div>
+      <p>Then install it with:</p>
+      <div class="code-block">
+        <button class="copy-btn" data-target="code3">Copy</button>
+        <pre id="code3"><code>sudo snap install vlc</code></pre>
+      </div>
+      <p>
+        Snaps update automatically, so you’ll always have the latest version of
+        your installed apps.
+      </p>
+
+      <h2>4. Managing Snaps</h2>
+      <p>
+        Here are some common commands for working with snaps:
+      </p>
+      <ul>
+        <li><strong>List installed snaps</strong>: <code>snap list</code></li>
+        <li><strong>Remove a snap</strong>: <code>sudo snap remove &lt;snap-name&gt;</code></li>
+        <li><strong>Refresh snaps</strong>: <code>sudo snap refresh</code></li>
+      </ul>
+      <p>
+        Snaps are sandboxed for security, meaning each snap runs in a confined
+        environment to minimize potential risks to your system.
+      </p>
 
       <h2>Conclusion</h2>
       <p>
-        Bash scripting is an essential skill that empowers you to automate tasks and customize your computing environment. This post marks my first deep dive into bash scripting, and I’m excited to share more articles and advanced techniques in the near future. Stay with us to learn more and master the art of bash scripting!
+        Snaps offer an easy, secure way to install and manage software on your
+        Linux system. By following these steps, you can install snapd, explore
+        the Snap Store, and enjoy hassle-free software management. Whether
+        you’re a developer or a daily user, snaps provide a powerful, consistent
+        experience across Linux distributions.
       </p>
 
       <!-- "Back to Blogs" button -->
@@ -123,7 +166,7 @@ echo "Hello, Bash Scripting World!"
           <!-- Update 'url' with your actual article link -->
           <!-- Facebook share -->
           <a
-            href="https://www.facebook.com/sharer/sharer.php?u=https://your-website.com/posts/post1.html"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://your-website.com/posts/post2.html"
             target="_blank"
           >
             <img
@@ -134,7 +177,7 @@ echo "Hello, Bash Scripting World!"
           </a>
           <!-- Twitter share -->
           <a
-            href="https://twitter.com/intent/tweet?url=https://your-website.com/posts/post1.html&text=Check%20out%20this%20article!"
+            href="https://twitter.com/intent/tweet?url=https://your-website.com/posts/post2.html&text=Check%20out%20this%20article!"
             target="_blank"
           >
             <img
@@ -145,7 +188,7 @@ echo "Hello, Bash Scripting World!"
           </a>
           <!-- LinkedIn share -->
           <a
-            href="https://www.linkedin.com/sharing/share-offsite/?url=https://your-website.com/posts/post1.html"
+            href="https://www.linkedin.com/sharing/share-offsite/?url=https://your-website.com/posts/post2.html"
             target="_blank"
           >
             <img
@@ -162,11 +205,14 @@ echo "Hello, Bash Scripting World!"
         <h3>Recent Posts</h3>
         <ol class="recent-posts">
           <li>
-            <a href="post1.html">Introduction to Bash Scripting</a>
+            <a href="post1.html"
+              >Automating Tasks in Linux with Shell Scripting</a
+            >
           </li>
           <li>
             <a href="post2.html">How to Start with Snaps</a>
           </li>
+          <!-- Add more as needed -->
         </ol>
       </div>
 
@@ -178,7 +224,7 @@ echo "Hello, Bash Scripting World!"
           data-href="https://www.facebook.com/profile.php?id=61572755199000"
           data-tabs="timeline"
           data-width="300"
-          data-height="800"
+          data-height="400"  <!-- Increased height to 400 -->
           data-small-header="true"
           data-adapt-container-width="true"
           data-hide-cover="false"
@@ -232,8 +278,10 @@ echo "Hello, Bash Scripting World!"
 
   <!-- Local Storage Page View Counter (User-Specific) -->
   <script>
+    // This is a local-only approach, storing view counts in the user's browser.
+    // It does NOT represent global page views across all visitors.
     (function() {
-      const pageKey = 'post1_views';
+      const pageKey = 'post2_views';
       let viewCount = localStorage.getItem(pageKey) || 0;
       viewCount = parseInt(viewCount, 10) + 1;
       localStorage.setItem(pageKey, viewCount);
