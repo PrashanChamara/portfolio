@@ -171,16 +171,6 @@ footer {
 
 /* Responsive - Mobile */
 @media (max-width: 768px) {
-  /* About Section: stack vertically */
-  #about {
-    flex-direction: column;
-    text-align: center;
-  }
-  #about img {
-    margin: 20px 0;
-  }
-
-  /* Nav links hidden by default on mobile, hamburger shown */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -190,11 +180,15 @@ footer {
     right: 0;
     width: 200px;
     padding: 10px;
+    z-index: 9999; /* ensure it’s on top */
   }
-  /* Add explicit rule for the toggled state */
+
   .nav-links.show {
     display: flex;
+    border: 2px solid red;  /* Temporary border to see it */
+    background-color: #333; /* Slightly lighter background for contrast */
   }
+
   .nav-toggle {
     display: block;
   }
