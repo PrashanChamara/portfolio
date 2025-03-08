@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
 
+  // Toggle 'show' class when hamburger is clicked
   navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('show');
   });
@@ -12,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. Register service worker for PWA
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('https://github.com/PrashanChamara/portfolio/service-worker.js')
+    // NOTE: Adjust '/service-worker.js' to match your hosting path if needed
+    navigator.serviceWorker.register('/service-worker.js')
       .then((registration) => {
         console.log('Service Worker registered with scope:', registration.scope);
       })
@@ -101,7 +103,10 @@ function initShootingGame() {
     checkCollisions();
 
     // Remove off-screen items
-    enemies = enemies.filter((e) => e.x > -200 && e.x < canvas.width + 200 && e.y > -200 && e.y < canvas.height + 200);
+    enemies = enemies.filter((e) => (
+      e.x > -200 && e.x < canvas.width + 200 &&
+      e.y > -200 && e.y < canvas.height + 200
+    ));
     bullets = bullets.filter((b) => b.y > 0);
 
     requestAnimationFrame(gameLoop);
