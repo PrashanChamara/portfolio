@@ -184,7 +184,7 @@ footer {
   }
 
   .nav-links.show {
-    display: flex; /* Remove any debug styling here */
+    display: flex;
   }
 
   .nav-toggle {
