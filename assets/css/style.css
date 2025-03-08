@@ -180,13 +180,11 @@ footer {
     right: 0;
     width: 200px;
     padding: 10px;
-    z-index: 9999; /* ensure it’s on top */
+    z-index: 9999; /* Ensure it’s on top */
   }
 
   .nav-links.show {
-    display: flex;
-    border: 2px solid red;  /* Temporary border to see it */
-    background-color: #333; /* Slightly lighter background for contrast */
+    display: flex; /* Remove any debug styling here */
   }
 
   .nav-toggle {
