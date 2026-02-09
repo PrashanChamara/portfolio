@@ -1,5 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // --- NEW: Mobile Menu Logic ---
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+    // -----------------------------
+
     // 1. Create floating particles
     function createParticles() {
         const container = document.getElementById('particles');
@@ -93,7 +113,7 @@ function handleSubmit(e) {
     e.target.reset();
 }
 
-// 7. Download Resume Function (From your new index.html)
+// 7. Download Resume Function
 function downloadResume() {
     const resumeHTML = `
 <!DOCTYPE html>

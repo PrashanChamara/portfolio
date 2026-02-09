@@ -197,6 +197,22 @@ nav.scrolled {
     box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
 }
 
+/* === MOBILE MENU TOGGLE STYLES === */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -1103,7 +1119,7 @@ footer {
 
 /* Individual Post Styles */
 .post-container {
-    padding-top: 8rem; /* Clear fixed nav */
+    padding-top: 8rem;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -1214,10 +1230,45 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; 
+    /* === MOBILE MENU STYLES === */
+    .menu-toggle {
+        display: flex; /* Show Hamburger */
+        z-index: 1001;
     }
 
+    .nav-links {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hide off-screen by default */
+        width: 70%;
+        height: 100vh;
+        flex-direction: column;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(20px);
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+
+    .nav-links.active {
+        right: 0; /* Slide in when active */
+    }
+
+    /* Hamburger Animation */
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Existing Styles */
     .stats {
         flex-direction: column;
         gap: 2rem;
