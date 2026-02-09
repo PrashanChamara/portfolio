@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automating daily tasks with Cron - Prashan Chamara</title>
+    <title>Customizing the GNOME desktop on Fedora - Prashan Chamara</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <base target="_blank">
@@ -25,77 +25,64 @@
     <div class="post-container">
         <article class="post-content">
             <div class="section-tag">Feb 09, 2026</div>
-            <h1 class="section-title">Automating daily tasks with Cron</h1>
-            <img src="../assets/images/post1.png" alt="Cover Image" class="post-main-image">
+            <h1 class="section-title">Customizing the GNOME desktop on Fedora</h1>
+            <img src="../assets/images/post2.png" alt="Cover Image" class="post-main-image">
             
             <div class="article-body">
-                
-<p>Hey there, tech enthusiasts! Ever feel like you're doing the same boring tasks on your Linux machine day in, day out? Well, what if I told you there's a way to automate those repetitive chores and reclaim your precious time? Enter <b>Cron</b> – your personal robotic assistant for Linux!</p>
+                <h2>Level Up Your Fedora GNOME: Time to Customize!</h2>
 
-<h2>What is Cron, Exactly?</h2>
+<p>Fedora is awesome, and GNOME is a rock-solid desktop environment. But let's be honest, sometimes the default look and feel just doesn't quite cut it. Want to inject some personality and make Fedora truly *yours*? You've come to the right place! Customizing GNOME is surprisingly easy, and this guide will walk you through some of the most popular tweaks.</p>
 
-<p>Cron is a time-based job scheduler in Linux. Think of it as a built-in alarm clock that can trigger scripts or commands at specific intervals. Want to run a backup script every night? Cron can do that. Need to check your server's disk space every hour? Cron's got you covered. It’s like having a tireless worker that diligently executes your instructions without complaint.</p>
+<h2>Essential Tools: GNOME Tweaks and Extensions</h2>
 
-<h2>Getting Started with Crontab</h2>
+<p>Before we dive in, let's grab the tools we need. The star of the show is GNOME Tweaks, a utility that unlocks a whole new world of customization options. To install it, open your terminal and type:</p>
 
-<p>The heart of Cron is the <b>crontab</b> (Cron table) file. This is where you define your scheduled tasks. To edit your crontab, open your terminal and type:</p>
+<code>sudo dnf install gnome-tweaks</code>
 
-<code>crontab -e</code>
+<p>Hit enter, type your password if prompted, and let Fedora handle the rest. Next, we need the "GNOME Shell integration" extension, which lets you manage extensions from your web browser. Just head to the <a href="https://extensions.gnome.org/" target="_blank">GNOME Extensions website</a> and follow the instructions (usually just clicking a toggle).  You might need to install a browser extension, so follow the website's prompts carefully.</p>
 
-<p>This will open your crontab file in a text editor. Now, let's learn how to add tasks to it.</p>
+<h2>Spice Things Up: Themes and Icons</h2>
 
-<h2>Crontab Syntax: Decoding the Mystery</h2>
+<p>One of the most impactful changes you can make is swapping out the default theme and icons. There's a massive ecosystem of free themes and icon packs available online. A great place to start is <a href="https://www.gnome-look.org/" target="_blank">GNOME-Look.org</a>. Here's how to apply a new theme:</p>
 
-<p>Crontab entries follow a specific format, which can seem a bit cryptic at first, but it's actually quite logical once you understand it. Here's the breakdown:</p>
+<ol>
+  <li>Download the theme you want from GNOME-Look (usually a <code>.tar.gz</code> or <code>.zip</code> file).</li>
+  <li>Extract the archive to either <code>~/.themes</code> (for just your user) or <code>/usr/share/themes</code> (for all users - requires sudo). If the <code>.themes</code> directory doesn't exist in your home directory, create it: <code>mkdir ~/.themes</code></li>
+  <li>Open GNOME Tweaks.</li>
+  <li>Navigate to "Appearance".</li>
+  <li>Under "Themes", you'll now see your newly installed theme available to select for "Applications" and "Shell".</li>
+</ol>
 
-<p><code>minute hour day_of_month month day_of_week command</code></p>
+<p>Applying icon themes is very similar. Download an icon pack, extract it to <code>~/.icons</code> or <code>/usr/share/icons</code>, and then select it in the "Appearance" section of GNOME Tweaks under "Icons".</p>
 
-<p>Let's dive into each field:</p>
+<h2>Extension Power: Supercharge Your Workflow</h2>
 
-<ul>
-    <li><b>minute:</b>  0-59</li>
-    <li><b>hour:</b> 0-23</li>
-    <li><b>day_of_month:</b> 1-31</li>
-    <li><b>month:</b> 1-12 (or jan,feb,mar,apr...)</li>
-    <li><b>day_of_week:</b> 0-6 (0 is Sunday, or sun,mon,tue...)</li>
-    <li><b>command:</b> The command or script you want to execute.</li>
-</ul>
-
-<p>You can use asterisks (*) to represent "every" in a field. For example, an asterisk in the "minute" field means "every minute."</p>
-
-<h2>Examples in Action</h2>
-
-<p>Here are a few examples to illustrate how it works:</p>
+<p>GNOME extensions are small, modular pieces of code that add functionality to your desktop. There are extensions for everything, from adding a weather widget to your top bar to completely overhauling the way your windows are managed.  Here are a few popular extensions to get you started:</p>
 
 <ul>
-    <li><b>Run a script every day at midnight:</b><br>
-        <code>0 0 * * * /path/to/your/script.sh</code>
-    </li>
-    <li><b>Run a command every hour:</b><br>
-        <code>0 * * * * echo "This runs every hour" >> /home/user/cron.log</code>
-    </li>
-    <li><b>Run a script every Monday at 8 AM:</b><br>
-        <code>0 8 * * 1 /path/to/your/script.sh</code>
-    </li>
-    <li><b>Run a script every 15 minutes:</b><br>
-        <code>*/15 * * * * /path/to/your/script.sh</code>
-    </li>
+  <li><b>Dash to Panel:</b> Replaces the default dash with a traditional panel.</li>
+  <li><b>Arc Menu:</b> Provides a traditional application menu.</li>
+  <li><b>Blur my Shell:</b> Adds a blur effect to various UI elements.</li>
+  <li><b>Caffeine:</b> Prevents your computer from automatically sleeping.</li>
 </ul>
 
-<p><b>Important Note:</b> Make sure your script has execute permissions (<code>chmod +x /path/to/your/script.sh</code>).</p>
+<p>You can browse and install extensions directly from the <a href="https://extensions.gnome.org/" target="_blank">GNOME Extensions website</a> after you've installed the GNOME Shell integration extension we mentioned earlier.</p>
 
-<h2>Best Practices and Tips</h2>
+<h2>Fine-Tuning: Fonts, Windows, and More</h2>
+
+<p>GNOME Tweaks offers even more granular control. Explore the other settings to customize fonts, window button placement, startup applications, and more. For example, under the "Fonts" section, you can adjust the fonts used for different parts of the system.</p>
+
+<h2>Important Considerations</h2>
+
+<p>While customization is fun, keep these points in mind:</p>
 
 <ul>
-    <li><b>Use Full Paths:</b> Always use the full path to your scripts and commands to avoid any ambiguity.</li>
-    <li><b>Redirect Output:</b> Redirect the output of your Cron jobs to a log file to easily troubleshoot any errors (like in the second example above).</li>
-    <li><b>Test Thoroughly:</b> Before relying on Cron for critical tasks, test your scripts manually to ensure they work as expected.</li>
-    <li><b>Environment Variables:</b> Cron's environment is minimal.  If your script relies on specific environment variables, define them within the script itself.</li>
+  <li><b>Compatibility:</b> Extensions aren't always compatible with every version of GNOME. If something breaks after installing an extension, try disabling it.</li>
+  <li><b>Performance:</b> Too many extensions can impact performance. Start with a few essentials and add more as needed.</li>
+  <li><b>Backup:</b> Before making major changes, it's always a good idea to back up your important data.</li>
 </ul>
 
-<h2>Beyond the Basics</h2>
-
-<p>Cron is a powerful tool that can significantly simplify your Linux life. While the basic syntax might seem intimidating at first, with a little practice, you'll be automating tasks like a pro. Experiment, explore, and discover the endless possibilities of Cron!</p>
+<p>With a little experimentation, you can transform your Fedora GNOME desktop into a personalized powerhouse. Happy customizing!</p>
 
             </div>
         </article>
