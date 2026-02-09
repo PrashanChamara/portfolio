@@ -3,6 +3,9 @@ import os
 REPO_PATH = "/home/prashan/Documents/Resume/portfolio"
 BLOG_INDEX_FILE = os.path.join(REPO_PATH, "blog.html")
 
+# We use the exact same marker string
+MARKER = '<div id="blog-insert-marker" style="display:none;"></div>'
+
 clean_html = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +58,9 @@ clean_html = """<!DOCTYPE html>
     <section id="blog-list" style="padding-top: 0;">
         <div class="container blog-grid" id="blogGrid">
             
-<div class="blog-card reveal" data-category="linux">
+""" + MARKER + """
+
+            <div class="blog-card reveal" data-category="linux">
                 <img src="assets/images/post1.png" alt="Linux for Beginners" class="blog-image">
                 <div>
                     <span class="category-tag">Linux Distro</span>
@@ -140,4 +145,4 @@ clean_html = """<!DOCTYPE html>
 
 with open(BLOG_INDEX_FILE, 'w', encoding='utf-8') as f:
     f.write(clean_html)
-print("✅ FIXED: blog.html has been reset.")
+print("✅ FIXED: blog.html has been reset with SHARED MARKER.")
