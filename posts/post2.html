@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best open source alternatives to Photoshop - Prashan Chamara</title>
+    <title>Customizing the GNOME desktop on Fedora - Prashan Chamara</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <base target="_blank">
@@ -25,56 +25,75 @@
     <div class="post-container">
         <article class="post-content">
             <div class="section-tag">Feb 09, 2026</div>
-            <h1 class="section-title">Best open source alternatives to Photoshop</h1>
+            <h1 class="section-title">Customizing the GNOME desktop on Fedora</h1>
             <img src="../assets/images/post1.png" alt="Cover Image" class="post-main-image">
             
             <div class="article-body">
                 
-<h2>Ditch Photoshop? You've Got Options! (And They're Free!)</h2>
+<p>Hey Fedora fans! Ready to make your GNOME desktop truly *yours*? Fedora's GNOME is awesome out of the box, but with a few tweaks, you can personalize it to fit your exact workflow and style. Let's dive into some easy customizations!</p>
 
-<p>Okay, let's be honest, Photoshop is a beast! It's powerful, but it can also feel overwhelming <em>and</em> it comes with a hefty price tag. But what if I told you that you can achieve amazing image editing results without spending a penny? Enter the world of open-source alternatives!</p>
+<h2>Install GNOME Tweaks: Your Customization Hub</h2>
 
-<p>Don't worry if you're not super techy! Open-source simply means the software is free to use, modify, and distribute. And these alternatives are surprisingly user-friendly. So, let's dive into some of the best!</p>
+<p>The first thing you'll want is the GNOME Tweaks tool. It's like a central control panel for all things GNOME customization.  You can install it from the command line like this:</p>
 
-<h2>GIMP: The Granddaddy of Free Image Editing</h2>
+<code>sudo dnf install gnome-tweaks</code>
 
-<p><code>GIMP</code> (GNU Image Manipulation Program) is probably the most well-known Photoshop alternative. Think of it as Photoshop's scrappy, but equally talented, cousin. It's been around for ages and has a huge community of users, meaning tons of tutorials and support are available online. GIMP is fantastic for:</p>
+<p>Once installed, just search for "Tweaks" in your Activities overview (hit the Super key, usually the Windows key). Let's see what kind of magic we can work!</p>
 
-<ul>
-  <li>Photo retouching: Remove blemishes, adjust colors, and make your photos shine.</li>
-  <li>Image composition: Combine multiple images into stunning creations.</li>
-  <li>Graphic design: Create logos, banners, and other visual elements.</li>
-</ul>
+<h2>Tweak Those Extensions!</h2>
 
-<p>It might take a little getting used to if you're a die-hard Photoshop user, but trust me, it's worth the effort. The power is in your hands!</p>
-
-<h2>Krita: Unleash Your Inner Artist</h2>
-
-<p>If you're more into digital painting and illustration, then <code>Krita</code> is your weapon of choice! It's specifically designed for artists and offers a ton of features, including:</p>
+<p>GNOME Extensions are like little add-ons that enhance your desktop experience.  They can do everything from adding weather updates to your top bar to improving window management.  Here's how to manage them:</p>
 
 <ul>
-  <li>Advanced brush engines: Simulate real-world painting techniques.</li>
-  <li>Layer management: Organize your artwork with ease.</li>
-  <li>Animation tools: Bring your drawings to life!</li>
+  <li><b>Install Extensions:</b> You can install extensions directly from extensions.gnome.org using your web browser (Firefox is a good choice on Fedora). Make sure you have the "GNOME Shell integration" extension installed in your browser. The website will guide you through the installation process.</li>
+  <li><b>Manage Extensions in Tweaks:</b> In the Tweaks tool, click on the "Extensions" tab. Here you can enable, disable, and configure the extensions you've installed.</li>
 </ul>
 
-<p>Krita has a clean, intuitive interface that's perfect for both beginners and experienced artists. Get ready to paint your masterpiece!</p>
-
-<h2>Inkscape: Vector Graphics Made Easy</h2>
-
-<p>Need to create scalable graphics that look crisp at any size? Then you need a vector graphics editor, and <code>Inkscape</code> is a brilliant, free option. Unlike programs that use pixels, Inkscape uses vectors, which are mathematical equations that define shapes. This means you can zoom in as much as you want without losing quality!</p>
-
-<p>Inkscape is perfect for:</p>
+<p>Some popular extensions you might want to check out include:</p>
 
 <ul>
-  <li>Creating logos: Ensure your logo looks sharp on everything from business cards to billboards.</li>
-  <li>Designing icons: Craft eye-catching icons for your website or app.</li>
-  <li>Illustrating diagrams: Create clear and professional-looking diagrams.</li>
+  <li><b>Dash to Panel:</b> Transforms the default dock into a traditional panel.</li>
+  <li><b>Arc Menu:</b> Replaces the Activities overview with a traditional application menu.</li>
+  <li><b>Blur My Shell:</b> Adds a beautiful blur effect to the top bar and other elements.</li>
+  <li><b>OpenWeather:</b> Shows the current weather in your top bar.</li>
 </ul>
 
-<h2>Ready to Take the Plunge?</h2>
+<h2>Customize Your Theme and Icons</h2>
 
-<p>Don't be intimidated! These open-source alternatives are powerful tools that can help you achieve amazing results. The best part is they're completely free, so you can experiment without any financial risk. Download them, explore their features, and see which one fits your needs best. Happy editing!</p>
+<p>Tired of the default look? No problem!  Changing the theme and icons can dramatically alter the appearance of your desktop.</p>
+
+<ul>
+  <li><b>Install Themes and Icons:</b> You can download themes and icon sets from websites like gnome-look.org. Usually, you'll find them in a compressed archive (like a .tar.gz file). Extract the contents.</li>
+  <li><b>Place Themes and Icons:</b> Put the extracted theme folder into <code>~/.themes</code> and the icon folder into <code>~/.icons</code>. If those folders don't exist, create them!  (Remember the dot at the beginning of the folder name makes them hidden by default)</li>
+  <li><b>Apply in Tweaks:</b> In Tweaks, go to the "Appearance" tab. You'll find dropdown menus for "Applications" (for themes), "Icons", "Cursor", and "Shell" (the top bar). Choose the theme and icon set you installed.</li>
+</ul>
+
+<p>Experiment and find a combination that you love!</p>
+
+<h2>Fontastic Fonts!</h2>
+
+<p>Fonts play a big role in the overall readability and aesthetic of your desktop.  Tweaks lets you adjust them:</p>
+
+<p>In Tweaks, go to the "Fonts" tab. Here you can change:</p>
+
+<ul>
+  <li><b>Interface Text:</b> The font used for menus, buttons, and other UI elements.</li>
+  <li><b>Document Text:</b> The font used in text editors and documents.</li>
+  <li><b>Monospace Text:</b> The font used in terminals and code editors.</li>
+  <li><b>Hinting and Antialiasing:</b>  These settings affect the sharpness and smoothness of your fonts. Experiment to see what looks best on your monitor.</li>
+</ul>
+
+<h2>A Few More Tweaks…</h2>
+
+<p>Here are a few more quick things you can customize:</p>
+
+<ul>
+  <li><b>Top Bar:</b> In Tweaks, under the "Top Bar" section, you can show the date, day of the week, and battery percentage.</li>
+  <li><b>Windows:</b> In Tweaks, under the "Windows" section, you can change the window title bar buttons (like Minimize and Maximize) and adjust other window-related settings.</li>
+  <li><b>Startup Applications:</b> Add programs that automatically start when you log in.  This can be found under "Startup Applications" section within the Tweaks app.</li>
+</ul>
+
+<p>That's just a starting point!  Explore the Tweaks tool and experiment with different settings to create a GNOME desktop that's perfectly tailored to your needs. Happy customizing!</p>
 
             </div>
         </article>

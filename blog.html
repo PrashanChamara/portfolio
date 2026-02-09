@@ -1,13 +1,13 @@
 
 
-            <div class="blog-card reveal" data-category="ai">
-                <img src="assets/images/snap-logo.png" alt="Best open source alternatives to Photoshop" class="blog-image">
+            <div class="blog-card reveal" data-category="linux distro">
+                <img src="assets/images/post1.png" alt="Customizing the GNOME desktop on Fedora" class="blog-image">
                 <div>
-                    <span class="category-tag">AI</span>
+                    <span class="category-tag">Linux Distro</span>
                     <span class="section-tag" style="background:none; border:none; padding:0; color:var(--gray); font-size:0.75rem; margin-left:10px;">Feb 09, 2026</span>
                 </div>
-                <h2>Best open source alternatives to Photoshop</h2>
-                <p>Ditch Photoshop's price tag! Discover powerful, free, open-source image editors for every creative need.</p>
+                <h2>Customizing the GNOME desktop on Fedora</h2>
+                <p>Transform your Fedora GNOME desktop into a personalized powerhouse with these simple customization tips and tricks.</p>
                 <a href="posts/post2.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
             </div>
     <!DOCTYPE html>
@@ -61,7 +61,7 @@
 
     <section id="blog-list" style="padding-top: 0;">
         <div class="container blog-grid" id="blogGrid">
-            
+
             <div class="blog-card reveal" data-category="linux">
                 <img src="assets/images/post1.png" alt="Linux for Beginners" class="blog-image">
                 <div>
@@ -72,7 +72,7 @@
                 <p>Why modern Linux is finally ready for non-tech users as a daily driver. It's faster, safer, and free.</p>
                 <a href="posts/post1.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
             </div>
-            
+
         </div>
 
         <div class="pagination" id="paginationControls"></div>
@@ -94,7 +94,7 @@
             const cards = Array.from(grid.getElementsByClassName('blog-card'));
             const searchInput = document.getElementById('searchInput');
             const paginationControls = document.getElementById('paginationControls');
-            
+
             const itemsPerPage = 6;
             let currentPage = 1;
             let filteredCards = cards;
@@ -112,7 +112,7 @@
                 const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
                 paginationControls.innerHTML = '';
                 if (totalPages <= 1) return;
-                
+
                 for (let i = 1; i <= totalPages; i++) {
                     const btn = document.createElement('button');
                     btn.classList.add('page-btn');

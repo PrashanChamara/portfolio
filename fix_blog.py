@@ -56,7 +56,7 @@ clean_html = """<!DOCTYPE html>
 
     <section id="blog-list" style="padding-top: 0;">
         <div class="container blog-grid" id="blogGrid">
-            
+
             <div class="blog-card reveal" data-category="linux">
                 <img src="assets/images/post1.png" alt="Linux for Beginners" class="blog-image">
                 <div>
@@ -67,7 +67,7 @@ clean_html = """<!DOCTYPE html>
                 <p>Why modern Linux is finally ready for non-tech users as a daily driver. It's faster, safer, and free.</p>
                 <a href="posts/post1.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
             </div>
-            
+
         </div>
 
         <div class="pagination" id="paginationControls"></div>
@@ -89,7 +89,7 @@ clean_html = """<!DOCTYPE html>
             const cards = Array.from(grid.getElementsByClassName('blog-card'));
             const searchInput = document.getElementById('searchInput');
             const paginationControls = document.getElementById('paginationControls');
-            
+
             const itemsPerPage = 6;
             let currentPage = 1;
             let filteredCards = cards;
@@ -107,7 +107,7 @@ clean_html = """<!DOCTYPE html>
                 const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
                 paginationControls.innerHTML = '';
                 if (totalPages <= 1) return;
-                
+
                 for (let i = 1; i <= totalPages; i++) {
                     const btn = document.createElement('button');
                     btn.classList.add('page-btn');
@@ -140,8 +140,8 @@ clean_html = """<!DOCTYPE html>
 </body>
 </html>"""
 
-# Write the clean file
-with open(BLOG_INDEX_FILE, 'w') as f:
+# Write the clean file with UTF-8 encoding
+with open(BLOG_INDEX_FILE, 'w', encoding='utf-8') as f:
     f.write(clean_html)
 
-print("✅ blog.html has been reset to a clean state. Size is now normal.")
+print("✅ blog.html has been successfully RESET.")
