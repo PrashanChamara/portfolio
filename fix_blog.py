@@ -1,16 +1,11 @@
+import os
 
+# CONFIGURATION
+REPO_PATH = "/home/prashan/Documents/Resume/portfolio"
+BLOG_INDEX_FILE = os.path.join(REPO_PATH, "blog.html")
 
-            <div class="blog-card reveal" data-category="ai">
-                <img src="assets/images/snap-logo.png" alt="Best open source alternatives to Photoshop" class="blog-image">
-                <div>
-                    <span class="category-tag">AI</span>
-                    <span class="section-tag" style="background:none; border:none; padding:0; color:var(--gray); font-size:0.75rem; margin-left:10px;">Feb 09, 2026</span>
-                </div>
-                <h2>Best open source alternatives to Photoshop</h2>
-                <p>Ditch Photoshop's price tag! Discover powerful, free, open-source image editors for every creative need.</p>
-                <a href="posts/post2.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-            </div>
-    <!DOCTYPE html>
+# The Clean HTML Structure (Resets everything to zero)
+clean_html = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -143,4 +138,10 @@
         });
     </script>
 </body>
-</html>
+</html>"""
+
+# Write the clean file
+with open(BLOG_INDEX_FILE, 'w') as f:
+    f.write(clean_html)
+
+print("✅ blog.html has been reset to a clean state. Size is now normal.")
