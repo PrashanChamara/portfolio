@@ -1,250 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Introduction to Bash Scripting</title>
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Facebook SDK for JavaScript (Official) -->
-  <script
-    async
-    defer
-    crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"
-  ></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Struggling with Your Computer: Why Modern Linux is Ready for You - Prashan Chamara</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <base target="_blank">
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a href="../index.html" class="logo">Prashan Chamara</a>
-        <!-- Hamburger Button -->
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span class="hamburger"></span>
-        </button>
-        <!-- Nav Links -->
+    <div class="bg-animation"></div>
+    <div class="particles" id="particles"></div>
+
+    <nav id="navbar">
+        <a href="../index.html" class="logo">PC.</a>
         <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../projects.html">Projects</a></li>
-          <li><a href="../blog.html">Blog</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
         </ul>
-      </div>
+        <button class="download-btn" onclick="downloadResume()">Resume</button>
     </nav>
-  </header>
 
-  <!-- Main Post Content & Sidebar -->
-  <section class="post-container container">
-    <!-- Left Column: Blog Article -->
-    <div class="post-content">
-      <h1>Introduction to Bash Scripting: Unleashing the Power of the Command Line</h1>
-      <p class="post-meta">
-        Published on: 2025/02/10 | Categories:
-        <a href="https://example.com/category/bash" target="_blank">Bash</a>,
-        <a href="https://example.com/category/scripting" target="_blank">Scripting</a>
-      </p>
+    <div class="post-container">
+        <article class="post-content">
+            <div class="section-tag">February 9, 2026</div>
+            <h1 class="section-title" style="font-size: 2.5rem;">Stop Struggling with Your Computer: Why Modern Linux is Ready for You</h1>
+            <img src="../assets/images/post1.png" alt="Linux for everyone banner" class="post-main-image">
+            
+            <div class="article-body" style="color: var(--gray); font-size: 1.1rem; line-height: 1.8;">
+                
+                <p style="margin-bottom: 1.5rem; color: var(--light); font-size: 1.25rem;">
+                    Let's be honest. How many times this month has your computer forced an update right when you needed to work? How often does it feel sluggish, or pop up with confusing security warnings?
+                </p>
 
-      <img
-        src="../assets/images/bash-logo.png"
-        alt="Bash Logo"
-        class="post-main-image"
-      />
+                <p style="margin-bottom: 2rem;">
+                    For decades, most of us believed there were only two choices: buy a Windows PC and deal with the headaches, or pay a premium for an Apple Mac. But there is a third option that has quietly evolved into something incredible. It's free, it's faster, it's more secure, and yes—in 2026, it is absolutely ready for non-technical users. It's called <strong>Linux</strong>.
+                </p>
 
-      <p>
-        Bash scripting is the art of writing scripts for the Bash shell—a command language interpreter widely used on Linux and macOS systems. It allows you to automate tasks, manage files, and streamline your workflow directly from the command line.
-      </p>
+                <h2 style="color: var(--light); margin-top: 3rem; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">Wait, isn't Linux just for coders and hackers?</h2>
+                <p style="margin-bottom: 2rem;">
+                    Fifteen years ago? Mostly, yes. It involved typing commands into a black screen. Today? Absolutely not.
+                </p>
+                <p style="margin-bottom: 2rem;">
+                    Think of it this way: Your computer has hardware (the brain, memory, storage) and an operating system (the software that manages the hardware, like Windows). Linux is just a different operating system.
+                </p>
+                <p style="margin-bottom: 2rem;">
+                    Modern Linux "Distros" (short for distributions, or flavors) look and feel just like the desktops you are used to. They have a Start menu, folders, a web browser (like Chrome or Firefox), and an "App Store" where you click one button to install software. If you can use a smartphone, you can use modern Linux.
+                </p>
 
-      <h2>What is Bash Scripting?</h2>
-      <p>
-        Bash scripting involves writing a series of commands in a text file that the Bash shell executes. These scripts can perform a wide range of tasks from simple file operations to complex system administration routines. The ability to automate repetitive tasks makes bash scripting a vital skill for system administrators and developers alike.
-      </p>
+                <h2 style="color: var(--light); margin-top: 3rem; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">Why should a regular user care?</h2>
+                <p style="margin-bottom: 1.5rem;">Here is why switching your "daily driver" laptop to Linux makes sense right now:</p>
+                
+                <ul style="list-style: none; margin-bottom: 2rem;">
+                    <li style="margin-bottom: 1rem; position: relative; padding-left: 2rem;">
+                        <i class="fas fa-check" style="position: absolute; left: 0; top: 5px; color: var(--primary);"></i>
+                        <strong style="color: var(--light);">It breathes new life into old hardware.</strong> That 5-year-old laptop that runs Windows terribly slow? Linux will run on it lightning fast. It's incredibly efficient.
+                    </li>
+                    <li style="margin-bottom: 1rem; position: relative; padding-left: 2rem;">
+                        <i class="fas fa-shield-alt" style="position: absolute; left: 0; top: 5px; color: var(--primary);"></i>
+                        <strong style="color: var(--light);">Forget about viruses.</strong> The way Linux is built makes it almost immune to the common viruses and malware that plague Windows exe files. You don't even need antivirus software.
+                    </li>
+                    <li style="margin-bottom: 1rem; position: relative; padding-left: 2rem;">
+                        <i class="fas fa-user-secret" style="position: absolute; left: 0; top: 5px; color: var(--primary);"></i>
+                        <strong style="color: var(--light);">Your privacy belongs to you.</strong> Modern commercial operating systems track what you do to serve ads. Linux doesn't. It's built by communities, not corporations trying to sell your data.
+                    </li>
+                    <li style="margin-bottom: 1rem; position: relative; padding-left: 2rem;">
+                        <i class="fas fa-sync" style="position: absolute; left: 0; top: 5px; color: var(--primary);"></i>
+                        <strong style="color: var(--light);">Updates on YOUR terms.</strong> Linux will never force restore your computer in the middle of a presentation. You update when you are ready, usually without even needing to restart.
+                    </li>
+                </ul>
 
-      <h2>Why is Bash Scripting Important?</h2>
-      <p>
-        The importance of bash scripting lies in its efficiency and flexibility:
-      </p>
-      <ul>
-        <li><strong>Automation:</strong> Automate routine tasks such as backups, system updates, or file management.</li>
-        <li><strong>Efficiency:</strong> Save time by combining multiple commands into a single script.</li>
-        <li><strong>Customization:</strong> Tailor scripts to meet specific system needs and workflows.</li>
-        <li><strong>Simplicity:</strong> Write simple yet powerful scripts without the overhead of more complex programming languages.</li>
-      </ul>
+                <h2 style="color: var(--light); margin-top: 3rem; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">Where do I start? (The Beginner Friendly Choices)</h2>
+                <p style="margin-bottom: 2rem;">
+                    You don't just "download Linux." You choose a "flavor" that suits your style. For beginners coming from Windows or Mac, there is one clear champion.
+                </p>
 
-      <h2>What Can You Do with Bash Scripting?</h2>
-      <p>
-        With bash scripting, you can:
-      </p>
-      <ul>
-        <li>Automate daily tasks such as cleaning temporary files or managing system resources.</li>
-        <li>Create custom command-line tools to simplify your workflow.</li>
-        <li>Schedule tasks with cron jobs for regular maintenance and updates.</li>
-        <li>Quickly process text, logs, and other data through pipelines and redirection.</li>
-      </ul>
+                <div style="background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem;">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;"><i class="fab fa-linux"></i> The Recommendation: Linux Mint</h3>
+                    <p>
+                        If you want your computer to just work, and you want it to feel familiar immediately, choose <strong>Linux Mint (Cinnamon Edition)</strong>.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        It has a "Start" menu in the bottom left, a taskbar, and system tray icons exactly where you expect them. It comes pre-installed with LibreOffice (compatible with Word/Excel documents), Firefox, and everything you need. It is polished, stable, and incredibly welcoming.
+                    </p>
+                </div>
 
-      <h2>A Simple Bash Script Example</h2>
-      <p>
-        Below is a basic bash script that prints a greeting message. Save it to a file (e.g., <code>hello.sh</code>), give it execute permissions with <code>chmod +x hello.sh</code>, and run it:
-      </p>
-      <div class="code-block">
-        <button class="copy-btn" data-target="code1">Copy</button>
-        <pre id="code1"><code>#!/bin/bash
-echo "Hello, Bash Scripting World!"
-</code></pre>
-      </div>
+                <h2 style="color: var(--light); margin-top: 3rem; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">The Ultimate Low-Risk Test Drive</h2>
+                <p style="margin-bottom: 2rem;">
+                    Here is the best part: You don't have to erase Windows to try Linux.
+                </p>
+                <p>
+                    Almost all Linux distros offer a "Live USB" mode. You download it to a USB stick, plug it into your laptop, and reboot. Your computer will run Linux entirely off the USB stick without touching a single file on your hard drive. You can connect to Wi-Fi, browse the web, and test it out. If you don't like it? Unplug the USB and reboot back into Windows like nothing happened.
+                </p>
+                <p style="margin-top: 2rem; font-weight: 600; color: var(--light);">
+                    Give it a try. You might just find that the best operating system you've never used is the one you've been waiting for.
+                </p>
 
-      <h2>Conclusion</h2>
-      <p>
-        Bash scripting is an essential skill that empowers you to automate tasks and customize your computing environment. This post marks my first deep dive into bash scripting, and I’m excited to share more articles and advanced techniques in the near future. Stay with us to learn more and master the art of bash scripting!
-      </p>
+            </div>
+        </article>
 
-      <!-- "Back to Blogs" button -->
-      <div style="margin-top: 40px;">
-        <a href="../blog.html" class="btn"
-          style="background-color: #00bcd4; color: #121212; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold;"
-        >← Back to Blogs</a>
-      </div>
+        <aside class="post-sidebar">
+            <div style="text-align: center; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(99, 102, 241, 0.1);">
+                <img src="../assets/images/dummy.png" alt="Prashan Chamara" style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid rgba(99, 102, 241, 0.3); object-fit: cover; margin-bottom: 1rem;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--light);">Prashan Chamara</h3>
+                <p style="color:var(--gray); font-size:0.9rem; line-height:1.5;">
+                    Dubai-based Digital Solutions Specialist & Linux Expert. I simplify complex tech to help you work smarter, not harder.
+                </p>
+                <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 0.8rem;">
+                    <a href="https://www.linkedin.com/in/prashan-chamara-b6a54792" style="color: var(--primary);"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/PrashanChamara" style="color: var(--primary);"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <h3>More Content</h3>
+            <ul class="skill-list" style="margin-top:1rem;">
+                <li><a href="../blog.html" style="color:var(--gray); text-decoration:none;">View Blog Index <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></a></li>
+            </ul>
+        </aside>
     </div>
 
-    <!-- Right Column: Sidebar -->
-    <aside class="post-sidebar">
-      <!-- Social Share Section -->
-      <div class="sidebar-section">
-        <h3>Share This Article</h3>
-        <div class="share-icons">
-          <!-- Update 'url' with your actual article link -->
-          <!-- Facebook share -->
-          <a
-            href="https://www.facebook.com/sharer/sharer.php?u=https://your-website.com/posts/post1.html"
-            target="_blank"
-          >
-            <img
-              src="../assets/images/facebook.svg"
-              alt="Share on Facebook"
-              class="social-icon"
-            />
-          </a>
-          <!-- Twitter share -->
-          <a
-            href="https://twitter.com/intent/tweet?url=https://your-website.com/posts/post1.html&text=Check%20out%20this%20article!"
-            target="_blank"
-          >
-            <img
-              src="../assets/images/twitter.svg"
-              alt="Share on Twitter"
-              class="social-icon"
-            />
-          </a>
-          <!-- LinkedIn share -->
-          <a
-            href="https://www.linkedin.com/sharing/share-offsite/?url=https://your-website.com/posts/post1.html"
-            target="_blank"
-          >
-            <img
-              src="../assets/images/linkedin.svg"
-              alt="Share on LinkedIn"
-              class="social-icon"
-            />
-          </a>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/prashan-chamara-b6a54792" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/PrashanChamara" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
         </div>
-      </div>
+        <p>&copy; 2025 Prashan Chamara. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Crafted with <i class="fas fa-heart" style="color: var(--secondary);"></i> and code</p>
+    </footer>
 
-      <!-- Most Recent Posts (with star bullets) -->
-      <div class="sidebar-section">
-        <h3>Recent Posts</h3>
-        <ol class="recent-posts">
-          <li>
-            <a href="post1.html">Introduction to Bash Scripting</a>
-          </li>
-          <li>
-            <a href="post2.html">How to Start with Snaps</a>
-          </li>
-        </ol>
-      </div>
-
-      <!-- Facebook Page (Increased height) -->
-      <div class="sidebar-section">
-        <h3>Facebook Page</h3>
-        <div
-          class="fb-page"
-          data-href="https://www.facebook.com/profile.php?id=61572755199000"
-          data-tabs="timeline"
-          data-width="300"
-          data-height="800"
-          data-small-header="true"
-          data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="true"
-        >
-          <blockquote
-            cite="https://www.facebook.com/profile.php?id=61572755199000"
-            class="fb-xfbml-parse-ignore"
-          >
-            <a
-              href="https://www.facebook.com/profile.php?id=61572755199000"
-              >Facebook Page</a
-            >
-          </blockquote>
-        </div>
-      </div>
-
-      <!-- Page Views (Local Storage) -->
-      <div class="sidebar-section">
-        <h3>Page Views</h3>
-        <p id="pageViewsCount">Loading...</p>
-      </div>
-    </aside>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Prashan Chamara. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Copy Button Script -->
-  <script>
-    document.querySelectorAll('.copy-btn').forEach(button => {
-      button.addEventListener('click', function(){
-        const targetId = this.getAttribute('data-target');
-        const codeBlock = document.getElementById(targetId);
-        if (codeBlock) {
-          navigator.clipboard.writeText(codeBlock.innerText).then(() => {
-            const originalText = this.innerText;
-            this.innerText = 'Copied!';
-            setTimeout(() => {
-              this.innerText = originalText;
-            }, 2000);
-          });
-        }
-      });
-    });
-  </script>
-
-  <!-- Local Storage Page View Counter (User-Specific) -->
-  <script>
-    (function() {
-      const pageKey = 'post1_views';
-      let viewCount = localStorage.getItem(pageKey) || 0;
-      viewCount = parseInt(viewCount, 10) + 1;
-      localStorage.setItem(pageKey, viewCount);
-
-      const countElement = document.getElementById('pageViewsCount');
-      if (countElement) {
-        countElement.textContent = `You have viewed this page ${viewCount} time(s) in this browser.`;
-      }
-    })();
-  </script>
-
-  <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Simple Alert for Resume Download on blog pages for now.
+        // The main.js in the final version should handle this globally.
+        function downloadResume() { alert("Please go to the home page to download the resume."); }
+    </script>
 </body>
 </html>

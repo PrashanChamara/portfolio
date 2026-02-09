@@ -1,96 +1,891 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prashan Chamara - Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashan Chamara | Digital Solutions Specialist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <base target="_blank">
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a href="index.html" class="logo">Prashan Chamara</a>
-        <!-- Hamburger Button -->
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span class="hamburger"></span>
-        </button>
-        <!-- Nav Links -->
+    <div class="bg-animation"></div>
+    <div class="particles" id="particles"></div>
+
+    <nav id="navbar">
+        <a href="index.html" class="logo">PC.</a>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+        <button class="download-btn" onclick="downloadResume()">
+            <i class="fas fa-download"></i> Resume
+        </button>
     </nav>
-  </header>
 
-  <!-- Hero Section with Shooting Game -->
-  <section id="hero-game">
-    <!-- Canvas for the shooting game -->
-    <canvas id="gameCanvas"></canvas>
-  </section>
-
-  <!-- Hero Section Text -->
-  <section id="hero">
-    <div class="container">
-      <h1>I am Prashan......</h1>
-      <p>Cyber Security | Programming | IT Administration</p>
-      <a href="assets/PrashanChamResume.pdf" class="btn">Download Resume</a>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I am a dedicated Administrator and IT Coordinator based in Dubai with
-        extensive experience in system administration, cloud automation, and
-        cybersecurity. I leverage my expertise to optimize workflows and ensure
-        secure, efficient operations.
-      </p>
-      <img src="assets/images/dummy.png" alt="Profile Picture" />
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <div class="contact-card">
-        <div class="contact-info">
-          <p>Email: <a href="mailto:prashanchamara.a@gmail.com">prashanchamara.a@gmail.com</a></p>
-          <p>Phone: +971588274266</p>
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-circle" style="font-size: 8px; margin-right: 8px;"></i>
+                Available for Opportunities
+            </div>
+            <h1>Hi, I'm <span>Prashan Chamara</span></h1>
+            <p class="hero-subtitle">Head of Admin & Digital Solutions Specialist</p>
+            <p class="hero-description">
+                Bridging the gap between complex business operations and modern technology. 
+                With 19+ years of experience, I architect custom ERP solutions while leading 
+                administrative teams to operational excellence.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Get In Touch
+                </a>
+                <a href="#projects" class="btn-secondary">
+                    <i class="fas fa-rocket"></i>
+                    View Projects
+                </a>
+            </div>
         </div>
-  
-        <form action="https://formspree.io/f/xrbpzorj" method="POST" id="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-  
 
-  <!-- Footer -->
-  <footer>
+        <div class="hero-visual">
+            <div class="profile-container">
+                <div class="profile-ring"></div>
+                <div class="profile-ring"></div>
+                <div class="profile-ring"></div>
+                <img src="assets/images/dummy.png" alt="Prashan Chamara" class="profile-img">
+
+                <div class="floating-card">
+                    <i class="fas fa-code"></i>
+                    <span>Full-Stack Dev</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-users-cog"></i>
+                    <span>Admin Lead</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-cloud"></i>
+                    <span>Cloud Expert</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-number">19+</div>
+            <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Team Members</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Client Satisfaction</div>
+        </div>
+    </div>
+
+    <section id="skills">
+        <div class="section-header reveal">
+            <div class="section-tag">Expertise</div>
+            <h2 class="section-title">Core Competencies</h2>
+            <p class="section-subtitle">Dual-threat professional combining business acumen with technical mastery</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Full-Stack Development</h3>
+                <ul class="skill-list">
+                    <li>Python 3 & Flask Framework</li>
+                    <li>SQLAlchemy & RESTful APIs</li>
+                    <li>HTML5, CSS3, JavaScript ES6+</li>
+                    <li>Bootstrap 5 & PWA Development</li>
+                    <li>Git/GitHub & VS Code</li>
+                </ul>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Strategic Administration</h3>
+                <ul class="skill-list">
+                    <li>High-level Contract Negotiation</li>
+                    <li>Sponsorship Acquisition</li>
+                    <li>Vendor & Facility Management</li>
+                    <li>Strategic Operational Planning</li>
+                    <li>Policy Formulation & Compliance</li>
+                </ul>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Financial Management</h3>
+                <ul class="skill-list">
+                    <li>Branch Cash Flow Analysis</li>
+                    <li>Budget Forecasting</li>
+                    <li>Petty Cash Reconciliation</li>
+                    <li>Recurring Invoicing Systems</li>
+                    <li>Audit Compliance</li>
+                </ul>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3>Digital Marketing</h3>
+                <ul class="skill-list">
+                    <li>Meta Ads Strategy</li>
+                    <li>SEO & Reputation Management</li>
+                    <li>Content Writing</li>
+                    <li>Graphic Design (Canva)</li>
+                    <li>Google Workspace Admin</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="section-header reveal">
+            <div class="section-tag">Career Path</div>
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">A journey of continuous growth and innovation</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <span class="timeline-date">Feb 2022 - Present</span>
+                    <h3 class="timeline-title">Head of Admin & Digital Solutions Specialist</h3>
+                    <p class="timeline-company">Desert Cubs Sports Academy, Dubai, UAE</p>
+                    <p class="timeline-desc">
+                        Leading administrative operations while architecting custom digital solutions 
+                        to streamline academy management.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Negotiated SLAs with facility providers and vendors</li>
+                        <li>Spearheaded sponsorship acquisition for tournaments</li>
+                        <li>Act as Branch Manager for SIS location</li>
+                        <li>Manage payroll for 25+ staff and PDC portfolio</li>
+                        <li>Implemented tracking system reducing bad debt significantly</li>
+                        <li>Super Admin for Google Workspace management</li>
+                    </ul>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <span class="timeline-date">Previous Role</span>
+                    <h3 class="timeline-title">IT Support & Web Developer</h3>
+                    <p class="timeline-company">Raffles Consolidated Pvt Ltd, Sri Lanka</p>
+                    <p class="timeline-desc">
+                        Contract-based role focused on digitizing IT help desk operations 
+                        and improving workflow efficiency.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Designed and deployed bespoke Web Application for IT Help Desk</li>
+                        <li>Reduced ticket resolution time by 30%</li>
+                        <li>Implemented categorized urgency assignments</li>
+                        <li>Analyzed IT workflows to reduce system downtime</li>
+                    </ul>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <span class="timeline-date">Previous Role</span>
+                    <h3 class="timeline-title">Banking Assistant</h3>
+                    <p class="timeline-company">Bank of Ceylon, Sri Lanka</p>
+                    <p class="timeline-desc">
+                        Managed complex financial portfolios and ensured compliance with 
+                        Central Bank regulations.
+                    </p>
+                    <ul class="timeline-achievements">
+                        <li>Conducted rigorous QA for online banking platforms</li>
+                        <li>Managed internal staff loan portfolios</li>
+                        <li>Ensured adherence to Central Bank regulations</li>
+                        <li>Handled high-volume transactions with zero discrepancies</li>
+                    </ul>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-header reveal">
+            <div class="section-tag">Portfolio</div>
+            <h2 class="section-title">Key Technical Projects</h2>
+            <p class="section-subtitle">Real-world solutions solving complex business problems</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3 class="project-title">Desert Cubs Admin Portal (ERP)</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Bootstrap 5</span>
+                        <span class="tech-tag">PWA</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        A comprehensive Progressive Web App built to manage entire academy operations. 
+                        Replaced fragmented spreadsheets with a unified digital solution.
+                    </p>
+                    <ul class="project-features">
+                        <li>Complex financial engine for recurring invoices</li>
+                        <li>Role-based access control (RBAC) security</li>
+                        <li>Automated invoicing with pro-rated billing & discounts</li>
+                        <li>PDF email dispatch for hundreds of students</li>
+                        <li>Background task automation for payment processing</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Live
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="project-title">Turbo Global Luxury Transport</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pillow</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        High-performance marketing website for VIP transport services. 
+                        Optimized for speed with lightweight architecture.
+                    </p>
+                    <ul class="project-features">
+                        <li>Lightweight SPA routing structure</li>
+                        <li>Smooth navigation experience</li>
+                        <li>Python scripts for batch image processing</li>
+                        <li>Custom CSS properties for theming</li>
+                        <li>Mobile-first responsive design</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="project-title">HR & Leave Management Module</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">SQLAlchemy</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        Comprehensive HR management system with integrated payroll and 
+                        dual-approval workflows.
+                    </p>
+                    <ul class="project-features">
+                        <li>Dual-approval workflow system</li>
+                        <li>Integrated with payroll processing</li>
+                        <li>Leave balance tracking</li>
+                        <li>Automated notifications</li>
+                        <li>Role-based dashboard views</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3 class="project-title">Touchless QR Attendance System</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Geolocation API</span>
+                        <span class="tech-tag">Python Backend</span>
+                        <span class="tech-tag">Mobile Responsive</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        Modern attendance tracking solution with geolocation verification 
+                        for contactless check-ins.
+                    </p>
+                    <ul class="project-features">
+                        <li>QR code generation and scanning</li>
+                        <li>GPS geolocation verification</li>
+                        <li>Real-time attendance tracking</li>
+                        <li>Anti-fraud location validation</li>
+                        <li>Exportable reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-header reveal">
+            <div class="section-tag">Academic</div>
+            <h2 class="section-title">Education & Certifications</h2>
+            <p class="section-subtitle">Continuous learning and professional development</p>
+        </div>
+
+        <div class="education-grid">
+            <div class="education-card reveal">
+                <div class="education-year">Jan 2025</div>
+                <h3 class="education-degree">BSc (Hons) Network Technology & Cyber Security</h3>
+                <p class="education-school">Lincoln University, Malaysia</p>
+            </div>
+
+            <div class="education-card reveal">
+                <div class="education-year">Sep 2019 - Jun 2020</div>
+                <h3 class="education-degree">Advanced Diploma in Information Technologies</h3>
+                <p class="education-school">Informatics Academy, Singapore</p>
+            </div>
+
+            <div class="education-card reveal">
+                <div class="education-year">Jan 2019 - Aug 2019</div>
+                <h3 class="education-degree">Diploma in Information Technologies</h3>
+                <p class="education-school">Informatics Academy, Singapore</p>
+            </div>
+        </div>
+
+        <div class="cert-list reveal">
+            <div class="cert-item">
+                <i class="fab fa-google"></i>
+                <span>Google Workspace Admin (2023)</span>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Certified Ethical Hacking (2022)</span>
+            </div>
+            <div class="cert-item">
+                <i class="fab fa-redhat"></i>
+                <span>Red Hat Enterprise Linux (2022)</span>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Business Analyst with Excel (2022)</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header reveal">
+            <div class="section-tag">Connect</div>
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-subtitle">Ready to bring your digital transformation to life</p>
+        </div>
+
+        <div class="contact-content reveal">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>Whether you need a custom ERP solution, administrative optimization, or technical consultation, 
+                I'm here to help transform your business operations.</p>
+
+                <div class="contact-links">
+                    <a href="mailto:prashanchamara.a@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div style="font-weight: 600;">Email</div>
+                            <div style="font-size: 0.875rem; color: var(--gray);">prashanchamara.a@gmail.com</div>
+                        </div>
+                    </a>
+
+                    <a href="tel:+971588274266" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <div style="font-weight: 600;">Phone</div>
+                            <div style="font-size: 0.875rem; color: var(--gray);">+971 58 827 4266</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <div style="font-weight: 600;">Location</div>
+                            <div style="font-size: 0.875rem; color: var(--gray);">Dubai, UAE</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Project Inquiry" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="4" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/prashan-chamara-b6a54792" class="social-link" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/PrashanChamara" class="social-link" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 Prashan Chamara. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Crafted with <i class="fas fa-heart" style="color: var(--secondary);"></i> and code</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Download Resume Function - Creates a modern HTML resume
+        function downloadResume() {
+            const resumeHTML = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prashan Chamara - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: #f8fafc; 
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+            color: white;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content .title {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        /* Content */
+        .content {
+            padding: 2rem 3rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #4f46e5;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0e7ff;
+        }
+
+        .summary {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #4f46e5;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: #1e293b;
+        }
+
+        .company {
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        .date {
+            color: #4f46e5;
+            font-weight: 600;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.25rem;
+            color: #4b5563;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .skill-category h4 {
+            color: #4f46e5;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+
+        /* Projects */
+        .project {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project h4 {
+            color: #4f46e5;
+            margin-bottom: 0.25rem;
+        }
+
+        .tech-stack {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 1rem;
+        }
+
+        .degree {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .school {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .year {
+            color: #4f46e5;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .cert-badge {
+            background: #e0e7ff;
+            color: #4f46e5;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
     <div class="container">
-      <p>&copy; 2025 Prashan Chamara. All Rights Reserved.</p>
-    </div>
-  </footer>
+        <div class="header">
+            <img src="assets/images/dummy.png" alt="Prashan Chamara" class="profile-img">
+            <div class="header-content">
+                <h1>PRASHAN CHAMARA</h1>
+                <div class="title">Head of Admin & Digital Solutions Specialist</div>
+                <div class="contact-info">
+                    <div class="contact-item">✉ prashanchamara.a@gmail.com</div>
+                    <div class="contact-item">📱 +971 58 827 4266</div>
+                    <div class="contact-item">📍 Dubai, UAE</div>
+                    <div class="contact-item">💼 www.linkedin.com/in/prashan-chamara-b6a54792</div>
+                    <div class="contact-item">💻 github.com/PrashanChamara</div>
+                </div>
+            </div>
+        </div>
 
-  <script src="assets/js/main.js"></script>
+        <div class="content">
+            <div class="section">
+                <div class="section-title">Professional Summary</div>
+                <div class="summary">
+                    Highly versatile and results-driven Head of Administration and Full-Stack Developer with over 19 years of diversified experience bridging the gap between complex business operations and modern technology. Uniquely qualified as a dual-threat professional: capable of leading administrative teams and managing HR workflows while simultaneously architecting and deploying custom ERP software. Expert in using Python (Flask), MySQL, and cloud technologies to automate manual processes, resulting in significant cost savings and operational efficiency.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Core Competencies</div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Full-Stack Development</h4>
+                        <div class="skill-list">Python 3, Flask, SQLAlchemy, RESTful APIs, HTML5, CSS3, JavaScript (ES6+), Bootstrap 5, Git/GitHub, PWA Development</div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Strategic Administration</h4>
+                        <div class="skill-list">Contract Negotiation, Sponsorship Acquisition, Vendor Management, Operational Planning, Policy Formulation</div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Financial Management</h4>
+                        <div class="skill-list">Cash Flow Analysis, Budget Forecasting, Payroll Management, PDC Handling, Audit Compliance</div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Digital Marketing</h4>
+                        <div class="skill-list">Meta Ads Strategy, SEO Management, Content Writing, Canva Design, Google Workspace Admin</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Professional Experience</div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Head of Admin & Digital Solutions Specialist</div>
+                            <div class="company">Desert Cubs Sports Academy, Dubai, UAE</div>
+                        </div>
+                        <div class="date">Feb 2022 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Serve as primary point of contact for external business dealings, successfully negotiating SLAs with facility providers and vendors</li>
+                        <li>Spearhead sponsorship acquisition by creating pitch decks and negotiating funding deals for tournaments</li>
+                        <li>Compile comprehensive Monthly Managerial Reports for the Board of Directors regarding enrollment trends and revenue analysis</li>
+                        <li>Operate as de facto Branch Manager for the SIS location, overseeing daily financial transactions and reconciliation</li>
+                        <li>Implemented a strict tracking system for outstanding dues, significantly reducing bad debt</li>
+                        <li>Manage high-volume portfolio of Post-Dated Cheques (PDC) and oversee payroll for 25+ staff</li>
+                        <li>Solely architected and deployed a custom Admin Portal (ERP) using Python and Flask to replace fragmented spreadsheets</li>
+                        <li>Engineered an automated invoicing engine handling pro-rated billing, discounts, and PDF email dispatch for hundreds of students</li>
+                        <li>Developed an HR & Leave Management Module with dual-approval workflows integrated with payroll</li>
+                        <li>Built a touchless QR-Code Attendance System with geolocation verification</li>
+                        <li>Execute targeted Facebook/Meta Ads campaigns to drive lead generation during peak seasons</li>
+                        <li>Super Admin for Google Workspace, managing user provisioning and security</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">IT Support & Web Developer (Contract)</div>
+                            <div class="company">Raffles Consolidated Pvt Ltd, Sri Lanka</div>
+                        </div>
+                        <div class="date">Previous Role</div>
+                    </div>
+                    <ul>
+                        <li>Designed and deployed a bespoke Web Application to digitize the manual IT Help Desk ticket logging process</li>
+                        <li>Reduced ticket resolution time by 30% through categorized urgency assignments and audit trails</li>
+                        <li>Analyzed IT workflows to implement digital solutions reducing system downtime</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Banking Assistant</div>
+                            <div class="company">Bank of Ceylon, Sri Lanka</div>
+                        </div>
+                        <div class="date">Previous Role</div>
+                    </div>
+                    <ul>
+                        <li>Conducted rigorous QA for online banking platforms</li>
+                        <li>Managed complex portfolios of internal staff loans ensuring adherence to Central Bank regulations</li>
+                        <li>Handled high-volume financial transactions with zero discrepancies in end-of-day balancing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Key Technical Projects</div>
+
+                <div class="project">
+                    <h4>Desert Cubs Admin Portal (ERP)</h4>
+                    <div class="tech-stack">Python (Flask), MySQL, SQLAlchemy, Bootstrap 5, JavaScript, PWA</div>
+                    <ul>
+                        <li>Comprehensive PWA built to manage entire academy operations</li>
+                        <li>Complex financial engine for recurring invoices with role-based security (RBAC)</li>
+                        <li>Background task automation for payment processing and PDF generation</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <h4>Turbo Global Luxury Transport Website</h4>
+                    <div class="tech-stack">HTML5, CSS3 (Custom Properties), Vanilla JavaScript, Python (Pillow)</div>
+                    <ul>
+                        <li>High-performance marketing website for VIP transport services</li>
+                        <li>Implemented lightweight SPA routing structure for smooth navigation</li>
+                        <li>Python scripts for batch processing fleet images</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Education</div>
+
+                <div class="education-item">
+                    <div class="degree">BSc (Hons) in Network Technology & Cyber Security</div>
+                    <div class="school">Lincoln University, Malaysia <span class="year">| Jan 2025</span></div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">Advanced Diploma in Information Technologies</div>
+                    <div class="school">Informatics Academy, Singapore <span class="year">| Sep 2019 – Jun 2020</span></div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">Diploma in Information Technologies</div>
+                    <div class="school">Informatics Academy, Singapore <span class="year">| Jan 2019 – Aug 2019</span></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Certifications</div>
+                <div class="cert-grid">
+                    <span class="cert-badge">Google Workspace Admin (2023)</span>
+                    <span class="cert-badge">Certified Ethical Hacking (2022)</span>
+                    <span class="cert-badge">Red Hat Enterprise Linux (2022)</span>
+                    <span class="cert-badge">Business Analyst with Excel (2022)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>`;
+
+            const blob = new Blob([resumeHTML], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Prashan_Chamara_Resume.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
 </body>
 </html>

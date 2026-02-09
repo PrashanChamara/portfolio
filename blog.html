@@ -1,162 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog - Page 1</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Prashan Chamara</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <base target="_blank">
+    <style>
+        /* Blog Specific Styles for Search & Pagination */
+        .blog-controls {
+            max-width: 800px;
+            margin: -2rem auto 3rem;
+            padding: 0 5%;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .search-box {
+            flex: 1;
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 50px;
+            color: white;
+            font-family: inherit;
+        }
+        .search-box i {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+        .page-btn {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: var(--light);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .page-btn.active, .page-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        .category-tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent);
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a href="index.html" class="logo">Prashan Chamara</a>
-        <!-- Hamburger Button -->
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span class="hamburger"></span>
-        </button>
-        <!-- Nav Links -->
+    <div class="bg-animation"></div>
+    <div class="particles" id="particles"></div>
+
+    <nav id="navbar">
+        <a href="index.html" class="logo">PC.</a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
-      </div>
+        <button class="download-btn" onclick="downloadResume()">Resume</button>
     </nav>
-  </header>
 
-  <!-- Blog Listing Section -->
-  <section id="blog">
-    <div class="container">
-      <h1>My Blog</h1>
-      <p>Welcome to my blog where I share insights on Linux, scripting, automation, cybersecurity, and programming.</p>
+    <section class="page-header">
+        <div class="section-tag">Knowledge Base</div>
+        <h1 class="section-title">My Blog</h1>
+        <p class="section-subtitle">Insights on Linux, Automation, and Web Development</p>
+    </section>
 
-      <!-- Blog Grid -->
-      <div class="blog-grid">
-        <!-- Card #1 -->
-        <div class="blog-card">
-          <img src="assets/images/post1.png" alt="Shell Scripting" class="blog-image" />
-          <h2>Automating Tasks in Linux with Shell Scripting</h2>
-          <p>A guide to automating repetitive tasks using powerful Linux shell scripting.</p>
-          <a href="posts/post1.html" class="btn read-more">Read More</a>
+    <div class="blog-controls reveal">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search topics (e.g. Linux, Python, AI)...">
         </div>
-
-        <!-- Card #2 -->
-        <div class="blog-card">
-          <img src="assets/images/post2.png" alt="Snap Package Manager" class="blog-image" />
-          <h2>How to Start with Snaps</h2>
-          <p>Install snaps on your Linux system and access thousands of apps in a secure environment.</p>
-          <a href="posts/post2.html" class="btn read-more">Read More</a>
-        </div>
-
-        <!-- 
-        // Card #3
-        <div class="blog-card">
-          <img src="assets/images/post3.jpg" alt="Another Blog" class="blog-image" />
-          <h2>Another Blog Title</h2>
-          <p>Short excerpt describing the blog content. Perfect for hooking readers.</p>
-          <a href="posts/post3.html" class="btn read-more">Read More</a>
-        </div>
-
-        // Card #4
-        <div class="blog-card">
-          <img src="assets/images/post4.jpg" alt="Post 4" class="blog-image" />
-          <h2>Fourth Blog Title</h2>
-          <p>A quick summary about the article, enough to catch interest.</p>
-          <a href="posts/post4.html" class="btn read-more">Read More</a>
-        </div>
-
-        // Card #5
-        <div class="blog-card">
-          <img src="assets/images/post5.jpg" alt="Post 5" class="blog-image" />
-          <h2>Fifth Blog Title</h2>
-          <p>A short excerpt describing the content for the fifth post.</p>
-          <a href="posts/post5.html" class="btn read-more">Read More</a>
-        </div>
-
-        // Card #6
-        <div class="blog-card">
-          <img src="assets/images/post6.jpg" alt="Post 6" class="blog-image" />
-          <h2>Sixth Blog Title</h2>
-          <p>Another excerpt that helps readers decide if they want to read more.</p>
-          <a href="posts/post6.html" class="btn read-more">Read More</a>
-        </div>
-
-        // Card #7
-        <div class="blog-card">
-          <img src="assets/images/post7.jpg" alt="Post 7" class="blog-image" />
-          <h2>Seventh Blog Title</h2>
-          <p>A short excerpt describing the content for the seventh post.</p>
-          <a href="posts/post7.html" class="btn read-more">Read More</a>
-        </div>
-
-        // Card #8
-        <div class="blog-card">
-          <img src="assets/images/post8.jpg" alt="Post 8" class="blog-image" />
-          <h2>Eighth Blog Title</h2>
-          <p>A short excerpt describing the content for the eighth post.</p>
-          <a href="posts/post8.html" class="btn read-more">Read More</a>
-        </div>
-
-        // Card #9
-        <div class="blog-card">
-          <img src="assets/images/post9.jpg" alt="Post 9" class="blog-image" />
-          <h2>Ninth Blog Title</h2>
-          <p>One more excerpt describing the ninth post.</p>
-          <a href="posts/post9.html" class="btn read-more">Read More</a>
-        </div>
-
-        // Card #10
-        <div class="blog-card">
-          <img src="assets/images/post10.jpg" alt="Post 10" class="blog-image" />
-          <h2>Tenth Blog Title</h2>
-          <p>Short excerpt for the tenth post. Keep it concise.</p>
-          <a href="posts/post10.html" class="btn read-more">Read More</a>
-        </div>
-
-        // Card #11
-        <div class="blog-card">
-          <img src="assets/images/post11.jpg" alt="Post 11" class="blog-image" />
-          <h2>Eleventh Blog Title</h2>
-          <p>A short excerpt describing the eleventh post content.</p>
-          <a href="posts/post11.html" class="btn read-more">Read More</a>
-        </div>
-
-        // Card #12
-        <div class="blog-card">
-          <img src="assets/images/post12.jpg" alt="Post 12" class="blog-image" />
-          <h2>Twelfth Blog Title</h2>
-          <p>One more short excerpt for the twelfth post on page 1.</p>
-          <a href="posts/post12.html" class="btn read-more">Read More</a>
-        </div>
-        -->
-
-      </div>
-
-      <!-- Pagination Links (Optional) -->
-      <!-- <div class="pagination">
-        <a href="#" class="page-link">&laquo; Previous</a>
-        <a href="#" class="page-link">Next &raquo;</a>
-      </div> -->
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Prashan Chamara. All Rights Reserved.</p>
-    </div>
-  </footer>
+    <section id="blog-list" style="padding-top: 0;">
+        <div class="container blog-grid" id="blogGrid">
+            <div class="blog-card reveal" data-category="linux">
+                <img src="assets/images/post1.png" alt="Linux for Beginners" class="blog-image">
+                <div>
+                    <span class="category-tag">Linux Distro</span>
+                    <span class="section-tag" style="background:none; border:none; padding:0; color:var(--gray); font-size:0.75rem; margin-left:10px;">Feb 09, 2026</span>
+                </div>
+                <h2>Stop Struggling with Your Computer</h2>
+                <p>Why modern Linux is finally ready for non-tech users as a daily driver. It's faster, safer, and free.</p>
+                <a href="posts/post1.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+        </div>
 
-  <script src="assets/js/main.js"></script>
+        <div class="pagination" id="paginationControls">
+            </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/prashan-chamara-b6a54792" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/PrashanChamara" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 Prashan Chamara. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Search and Pagination Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const grid = document.getElementById('blogGrid');
+            const cards = Array.from(grid.getElementsByClassName('blog-card'));
+            const searchInput = document.getElementById('searchInput');
+            const paginationControls = document.getElementById('paginationControls');
+            
+            const itemsPerPage = 6;
+            let currentPage = 1;
+            let filteredCards = cards;
+
+            function displayCards() {
+                // Hide all first
+                cards.forEach(card => card.style.display = 'none');
+                
+                // Calculate slice
+                const start = (currentPage - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                const pageItems = filteredCards.slice(start, end);
+                
+                // Show current page items
+                pageItems.forEach(card => card.style.display = 'flex');
+                
+                renderPagination();
+            }
+
+            function renderPagination() {
+                const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
+                paginationControls.innerHTML = '';
+                
+                for (let i = 1; i <= totalPages; i++) {
+                    const btn = document.createElement('button');
+                    btn.classList.add('page-btn');
+                    if (i === currentPage) btn.classList.add('active');
+                    btn.innerText = i;
+                    btn.onclick = () => {
+                        currentPage = i;
+                        displayCards();
+                        document.getElementById('blog-list').scrollIntoView({behavior: 'smooth'});
+                    };
+                    paginationControls.appendChild(btn);
+                }
+            }
+
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                filteredCards = cards.filter(card => {
+                    const title = card.querySelector('h2').innerText.toLowerCase();
+                    const text = card.querySelector('p').innerText.toLowerCase();
+                    const category = card.getAttribute('data-category') || '';
+                    return title.includes(term) || text.includes(term) || category.includes(term);
+                });
+                currentPage = 1;
+                displayCards();
+            });
+
+            // Init
+            displayCards();
+        });
+    </script>
 </body>
 </html>
