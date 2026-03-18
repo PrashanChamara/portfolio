@@ -29,9 +29,9 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="download-btn" onclick="downloadResume()">
+        <a href="assets/PrashanChamResume.pdf" class="download-btn" download>
             <i class="fas fa-download"></i> Resume
-        </button>
+        </a>
     </nav>
 
     <section class="hero" id="about">
@@ -247,6 +247,40 @@
             <div class="project-card reveal">
                 <div class="project-header">
                     <div class="project-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="project-title">Tux Talks — Agentless DevOps Dashboard</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python 3</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Paramiko</span>
+                        <span class="tech-tag">AES-256-GCM</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        An agentless, high-performance server management platform allowing complete Linux fleet control via standard SSH connections.
+                    </p>
+                    <ul class="project-features">
+                        <li>Robust security with AES-256-GCM encrypted credential storage</li>
+                        <li>14 management pillars including Live Docker container control</li>
+                        <li>Visual cronjob scheduling and UFW firewall management</li>
+                        <li>One-click Git deployments and real-time resource monitoring</li>
+                        <li>Responsive Glassmorphism UI for simplified terminal workflows</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/PrashanChamara/tux-talks-DevOps-Center.git" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon">
                         <i class="fas fa-school"></i>
                     </div>
                     <h3 class="project-title">Desert Cubs Admin Portal (ERP)</h3>
@@ -271,13 +305,9 @@
                         <li>Background task automation for payment processing</li>
                     </ul>
                     <div class="project-links">
-                        <a href="#" class="project-link">
+                        <a href="https://www.desertcubs-admin.app/" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
                             View Live
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fab fa-github"></i>
-                            GitHub
                         </a>
                     </div>
                 </div>
@@ -310,7 +340,7 @@
                         <li>Mobile-first responsive design</li>
                     </ul>
                     <div class="project-links">
-                        <a href="#" class="project-link">
+                        <a href="https://turboglobaltm.com/" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
                             View Live
                         </a>
@@ -502,353 +532,5 @@
 
     <script src="assets/js/main.js"></script>
 
-    <script>
-        // Download Resume Function - Creates a modern HTML resume
-        function downloadResume() {
-            const resumeHTML = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Prashan Chamara - Resume</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background: #f8fafc; 
-            color: #1e293b;
-            line-height: 1.6;
-        }
-        .container { 
-            max-width: 1000px; 
-            margin: 0 auto; 
-            background: white;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
-            color: white;
-            padding: 3rem;
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid rgba(255,255,255,0.3);
-            object-fit: cover;
-        }
-        .header-content h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .header-content .title {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-        }
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            font-size: 0.875rem;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(255,255,255,0.15);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-        }
-        /* Content */
-        .content {
-            padding: 2rem 3rem;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .section-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #4f46e5;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e0e7ff;
-        }
-        .summary {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            border-left: 4px solid #4f46e5;
-        }
-        /* Experience */
-        .experience-item {
-            margin-bottom: 1.5rem;
-        }
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 0.5rem;
-        }
-        .job-title {
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: #1e293b;
-        }
-        .company {
-            color: #6b7280;
-            font-weight: 600;
-        }
-        .date {
-            color: #4f46e5;
-            font-weight: 600;
-            font-size: 0.875rem;
-            white-space: nowrap;
-        }
-        ul {
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
-        }
-        li {
-            margin-bottom: 0.25rem;
-            color: #4b5563;
-        }
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-        .skill-category h4 {
-            color: #4f46e5;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        .skill-list {
-            font-size: 0.875rem;
-            color: #4b5563;
-        }
-        /* Projects */
-        .project {
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .project h4 {
-            color: #4f46e5;
-            margin-bottom: 0.25rem;
-        }
-        .tech-stack {
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin-bottom: 0.5rem;
-        }
-        /* Education */
-        .education-item {
-            margin-bottom: 1rem;
-        }
-        .degree {
-            font-weight: 600;
-            color: #1e293b;
-        }
-        .school {
-            color: #6b7280;
-            font-size: 0.875rem;
-        }
-        .year {
-            color: #4f46e5;
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-        /* Certifications */
-        .cert-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        .cert-badge {
-            background: #e0e7ff;
-            color: #4f46e5;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        @media print {
-            body { background: white; }
-            .container { box-shadow: none; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <img src="assets/images/dummy.png" alt="Prashan Chamara" class="profile-img">
-            <div class="header-content">
-                <h1>PRASHAN CHAMARA</h1>
-                <div class="title">Head of Admin & Digital Solutions Specialist</div>
-                <div class="contact-info">
-                    <div class="contact-item">✉ prashanchamara.a@gmail.com</div>
-                    <div class="contact-item">📱 +971 58 827 4266</div>
-                    <div class="contact-item">📍 Dubai, UAE</div>
-                    <div class="contact-item">💼 www.linkedin.com/in/prashan-chamara-b6a54792</div>
-                    <div class="contact-item">💻 github.com/PrashanChamara</div>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="section">
-                <div class="section-title">Professional Summary</div>
-                <div class="summary">
-                    Highly versatile and results-driven Head of Administration and Full-Stack Developer with over 19 years of diversified experience bridging the gap between complex business operations and modern technology. Uniquely qualified as a dual-threat professional: capable of leading administrative teams and managing HR workflows while simultaneously architecting and deploying custom ERP software. Expert in using Python (Flask), MySQL, and cloud technologies to automate manual processes, resulting in significant cost savings and operational efficiency.
-                </div>
-            </div>
-            <div class="section">
-                <div class="section-title">Core Competencies</div>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Full-Stack Development</h4>
-                        <div class="skill-list">Python 3, Flask, SQLAlchemy, RESTful APIs, HTML5, CSS3, JavaScript (ES6+), Bootstrap 5, Git/GitHub, PWA Development</div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Strategic Administration</h4>
-                        <div class="skill-list">Contract Negotiation, Sponsorship Acquisition, Vendor Management, Operational Planning, Policy Formulation</div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Financial Management</h4>
-                        <div class="skill-list">Cash Flow Analysis, Budget Forecasting, Payroll Management, PDC Handling, Audit Compliance</div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Digital Marketing</h4>
-                        <div class="skill-list">Meta Ads Strategy, SEO Management, Content Writing, Canva Design, Google Workspace Admin</div>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="section-title">Professional Experience</div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="job-title">Head of Admin & Digital Solutions Specialist</div>
-                            <div class="company">Desert Cubs Sports Academy, Dubai, UAE</div>
-                        </div>
-                        <div class="date">Feb 2022 – Present</div>
-                    </div>
-                    <ul>
-                        <li>Serve as primary point of contact for external business dealings, successfully negotiating SLAs with facility providers and vendors</li>
-                        <li>Spearhead sponsorship acquisition by creating pitch decks and negotiating funding deals for tournaments</li>
-                        <li>Compile comprehensive Monthly Managerial Reports for the Board of Directors regarding enrollment trends and revenue analysis</li>
-                        <li>Operate as de facto Branch Manager for the SIS location, overseeing daily financial transactions and reconciliation</li>
-                        <li>Implemented a strict tracking system for outstanding dues, significantly reducing bad debt</li>
-                        <li>Manage high-volume portfolio of Post-Dated Cheques (PDC) and oversee payroll for 25+ staff</li>
-                        <li>Solely architected and deployed a custom Admin Portal (ERP) using Python and Flask to replace fragmented spreadsheets</li>
-                        <li>Engineered an automated invoicing engine handling pro-rated billing, discounts, and PDF email dispatch for hundreds of students</li>
-                        <li>Developed an HR & Leave Management Module with dual-approval workflows integrated with payroll</li>
-                        <li>Built a touchless QR-Code Attendance System with geolocation verification</li>
-                        <li>Execute targeted Facebook/Meta Ads campaigns to drive lead generation during peak seasons</li>
-                        <li>Super Admin for Google Workspace, managing user provisioning and security</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="job-title">IT Support & Web Developer (Contract)</div>
-                            <div class="company">Raffles Consolidated Pvt Ltd, Sri Lanka</div>
-                        </div>
-                        <div class="date">Previous Role</div>
-                    </div>
-                    <ul>
-                        <li>Designed and deployed a bespoke Web Application to digitize the manual IT Help Desk ticket logging process</li>
-                        <li>Reduced ticket resolution time by 30% through categorized urgency assignments and audit trails</li>
-                        <li>Analyzed IT workflows to implement digital solutions reducing system downtime</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="job-title">Banking Assistant</div>
-                            <div class="company">Bank of Ceylon, Sri Lanka</div>
-                        </div>
-                        <div class="date">Previous Role</div>
-                    </div>
-                    <ul>
-                        <li>Conducted rigorous QA for online banking platforms</li>
-                        <li>Managed complex portfolios of internal staff loans ensuring adherence to Central Bank regulations</li>
-                        <li>Handled high-volume financial transactions with zero discrepancies in end-of-day balancing</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section">
-                <div class="section-title">Key Technical Projects</div>
-                <div class="project">
-                    <h4>Desert Cubs Admin Portal (ERP)</h4>
-                    <div class="tech-stack">Python (Flask), MySQL, SQLAlchemy, Bootstrap 5, JavaScript, PWA</div>
-                    <ul>
-                        <li>Comprehensive PWA built to manage entire academy operations</li>
-                        <li>Complex financial engine for recurring invoices with role-based security (RBAC)</li>
-                        <li>Background task automation for payment processing and PDF generation</li>
-                    </ul>
-                </div>
-                <div class="project">
-                    <h4>Turbo Global Luxury Transport Website</h4>
-                    <div class="tech-stack">HTML5, CSS3 (Custom Properties), Vanilla JavaScript, Python (Pillow)</div>
-                    <ul>
-                        <li>High-performance marketing website for VIP transport services</li>
-                        <li>Implemented lightweight SPA routing structure for smooth navigation</li>
-                        <li>Python scripts for batch processing fleet images</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section">
-                <div class="section-title">Education</div>
-                <div class="education-item">
-                    <div class="degree">BSc (Hons) in Network Technology & Cyber Security</div>
-                    <div class="school">Lincoln University, Malaysia <span class="year">| Jan 2025</span></div>
-                </div>
-                <div class="education-item">
-                    <div class="degree">Advanced Diploma in Information Technologies</div>
-                    <div class="school">Informatics Academy, Singapore <span class="year">| Sep 2019 – Jun 2020</span></div>
-                </div>
-                <div class="education-item">
-                    <div class="degree">Diploma in Information Technologies</div>
-                    <div class="school">Informatics Academy, Singapore <span class="year">| Jan 2019 – Aug 2019</span></div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="section-title">Certifications</div>
-                <div class="cert-grid">
-                    <span class="cert-badge">Google Workspace Admin (2023)</span>
-                    <span class="cert-badge">Certified Ethical Hacking (2022)</span>
-                    <span class="cert-badge">Red Hat Enterprise Linux (2022)</span>
-                    <span class="cert-badge">Business Analyst with Excel (2022)</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>`;
-
-            const blob = new Blob([resumeHTML], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Prashan_Chamara_Resume.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
-    </script>
 </body>
 </html>

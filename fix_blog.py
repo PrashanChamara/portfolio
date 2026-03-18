@@ -39,7 +39,7 @@ clean_html = """<!DOCTYPE html>
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
-        <button class="download-btn" onclick="downloadResume()">Resume</button>
+        <a href="assets/PrashanChamResume.pdf" class="download-btn" download>Resume</a>
     </nav>
 
     <section class="page-header">
